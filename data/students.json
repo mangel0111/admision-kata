@@ -1,0 +1,20 @@
+[
+    {
+        "id": "000001",
+        "name": "Woddy Allen",
+        "age": 52,
+        "address": "New York"
+    },
+    {
+        "id": "000002",
+        "name": "Alejandro Iñarritu",
+        "age": 40,
+        "address": "Mexico"
+    },
+    {
+        "id": "000003",
+        "name": "Bong Joon-ho",
+        "age": 47,
+        "address": "Seul"
+    }
+]

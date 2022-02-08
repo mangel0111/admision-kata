@@ -6,3 +6,8 @@ test("Should read the students", async () => {
   expect(response.status).toBe(200);
   expect(response.text).toBe("READ");
 });
+test("Should create the student ", async () => {
+  const response = await request(app.callback()).post("/students");
+  expect(response.status).toBe(200);
+  expect(response.text).toBe("CREATED");
+});

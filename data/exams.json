@@ -1,0 +1,62 @@
+[
+    {
+        "exam": "MATHS",
+        "user": "000001",
+        "score": 0
+    },
+    {
+        "exam": "MATHS",
+        "user": "000002",
+        "score": 5
+    },
+    {
+        "exam": "MATHS",
+        "user": "000003",
+        "score": 10
+    },
+    {
+        "exam": "SCIENCES",
+        "user": "000001",
+        "score": 2
+    },
+    {
+        "exam": "SCIENCES",
+        "user": "000002",
+        "score": 10
+    },
+    {
+        "exam": "SCIENCES",
+        "user": "000003",
+        "score": 7
+    },
+    {
+        "exam": "ARTS",
+        "user": "000001",
+        "score": 5
+    },
+    {
+        "exam": "ARTS",
+        "user": "000002",
+        "score": 10
+    },
+    {
+        "exam": "ARTS",
+        "user": "000003",
+        "score": 7
+    },
+    {
+        "exam": "ECONOMICS",
+        "user": "000001",
+        "score": 2
+    },
+    {
+        "exam": "ECONOMICS",
+        "user": "000002",
+        "score": 10
+    },
+    {
+        "exam": "ECONOMICS",
+        "user": "000003",
+        "score": 7
+    }
+]
