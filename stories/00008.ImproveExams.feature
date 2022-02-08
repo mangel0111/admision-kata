@@ -6,4 +6,4 @@ Feature: Improve Approval Rate
         Scenario: A user needs to check the exams
             Given I am user
             When I retrieve the exams
-            Then I see the that all exams are
+            Then I see the that all exams are approved
