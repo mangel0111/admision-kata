@@ -3,6 +3,7 @@ import * as requestLogger from "koa-logger";
 import * as bodyParser from "koa-bodyparser";
 import { StatusCodes } from "http-status-codes";
 import { defineRoutes } from "./router";
+import { initDB } from "./db";
 
 const app: Koa = new Koa();
 
@@ -26,5 +27,7 @@ app.use(
 app.use(requestLogger());
 
 defineRoutes(app);
+
+initDB();
 
 export default app;

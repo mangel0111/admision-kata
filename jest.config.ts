@@ -10,6 +10,7 @@ const jestConfig: Config.InitialOptions = {
     "!**/coverage/**",
     "!src/server.ts",
     "!src/app.ts",
+    "!src/db.ts",
     "!jest.config.ts",
   ],
   transform: {
@@ -31,6 +32,7 @@ const jestConfig: Config.InitialOptions = {
     "/coverage/",
     "/jest.config.ts",
     "/src/server.ts",
+    "/src/db.ts",
     "/src/app.ts",
   ],
 };
