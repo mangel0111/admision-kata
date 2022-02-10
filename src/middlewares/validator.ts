@@ -21,7 +21,8 @@ export const validate = (schema: Joi.ObjectSchema) => {
   return async (ctx: Context, next: Next) => {
     const validationResult: Joi.ValidationResult = await schema.validate(
       {
-        body: JSON.parse(ctx.request.body),
+        body: typeof ctx.request.body === 'string'?
+            JSON.parse(ctx.request.body): ctx.request.body,
         query: ctx.query,
       },
       {
