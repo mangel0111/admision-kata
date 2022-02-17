@@ -17,7 +17,7 @@ Feature: Create Exam
             When I try to create a new exam with missing info
             Then I see an error
 
-        Scenario: A user try to include a new exam for a no exisitng student
+        Scenario: A user try to include a new exam for a no existing student
             Given I am user
-            When I try to create a new exam for a non exsiting student
+            When I try to create a new exam for a non existing student
             Then I see an error
