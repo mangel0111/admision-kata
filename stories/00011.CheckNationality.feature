@@ -6,7 +6,7 @@ Feature: Check Nationality
 
     Rule: Take the nationality with the biggest probability.
     Rule: If no nationality can be identified, by default is an undocumented.
-    Rule: The default country for immigrants will be defined by Dan Mildon.
+    Rule: The default country for undocumented will be defined by Dan Mildon.
 
         Scenario: A user needs to know the the nationality of a student
             Given I am user
