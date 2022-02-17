@@ -1,12 +1,12 @@
 import * as request from "supertest";
+const dbHandler = require("../db-handler");
 import app from "../../app";
 import UserService from "../../resources/students/student.service";
-const dbHandler = require("../db-handler");
 
 /**
  * Connect to a new in-memory database before running any tests.
  */
-beforeAll(dbHandler.connect);
+//beforeAll(dbHandler.connect);
 
 /**
  * Seed the database.

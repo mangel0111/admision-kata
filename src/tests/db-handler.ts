@@ -1,5 +1,11 @@
 'use strict';
 
+import {initDB} from '../db';
+
+jest.mock('../db', () => ({
+    initDB: connect,
+}));
+
 const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
 
@@ -9,10 +15,9 @@ let mongod : any = undefined;
 /**
  * Connect to the in-memory database.
  */
-module.exports.connect = async () => {
+const connect = async () => {
     mongod = await MongoMemoryServer.create();
     const uri = mongod.getUri();
-
     const mongooseOpts = {
         useNewUrlParser: true,
         autoReconnect: true,
@@ -22,6 +27,7 @@ module.exports.connect = async () => {
 
     await mongoose.connect(uri, mongooseOpts);
 };
+module.exports.connect = connect
 
 /**
  * Drop database, close the connection and stop mongod.

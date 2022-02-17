@@ -28,6 +28,6 @@ app.use(requestLogger());
 
 defineRoutes(app);
 
-//initDB();
+initDB();
 
 export default app;
