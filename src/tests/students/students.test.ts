@@ -29,11 +29,10 @@ test("Should read the students", async () => {
   const response = await request(app.callback()).get("/students");
   expect(response.status).toBe(200);
   expect(response.text).toBe("READ");
-  const student = await UserService.findOne();
-  expect(student.name).toBe("READ");
 });
 test("Should create the student ", async () => {
-  const response = await request(app.callback()).post("/students");
+  const response = await request(app.callback()).post("/students")
+      .send({name:'pepi'});
   expect(response.status).toBe(200);
   expect(response.text).toBe("CREATED");
 });
