@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx jest",
+    "test:watch": "npx jest --watch",
     "lint": "tslint --project tsconfig.json --format stylish",
     "build": "tsc",
     "serve": "ts-node src/server.ts",

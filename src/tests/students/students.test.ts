@@ -1,7 +1,7 @@
 import * as request from "supertest";
 import app from "../../app";
 import UserService from "../../resources/students/student.service";
-const dbHandler = require('../db-handler');
+const dbHandler = require("../db-handler");
 
 /**
  * Connect to a new in-memory database before running any tests.
@@ -31,10 +31,18 @@ test("Should read the students", async () => {
   expect(response.text).toBe("READ");
 });
 test("Should create the student ", async () => {
-  const response = await request(app.callback()).post("/students")
-      .send({name:'pepi'});
+  const response = await request(app.callback())
+    .post("/students")
+    .send({ name: "pepi" });
   expect(response.status).toBe(200);
   expect(response.text).toBe("CREATED");
+});
+test("Should fails when the name is not provided", async () => {
+  const response = await request(app.callback()).post("/students");
+  expect(response.status).toBe(400);
+  expect(response.body).toStrictEqual({
+    error: { message: "Bad Request", status: 400 },
+  });
 });
 
 /**
@@ -44,5 +52,5 @@ const createStudents = async () => {
   await UserService.create(studentExample);
 };
 const studentExample = {
-  name: 'pepe',
+  name: "pepe",
 };
