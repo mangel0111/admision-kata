@@ -4,9 +4,11 @@ import * as Joi from "joi";
 import { validate } from "../../../middlewares/validator";
 
 const createUserSchema: Joi.ObjectSchema = Joi.object({
-  name: Joi.string().max(100).trim().messages({
-    "string.empty": "The name is required",
-  }),
+  body: {
+    name: Joi.string().max(100).trim().messages({
+      "string.empty": "The name is required",
+    }).required(),
+  },
 });
 
 const handler = async (ctx: Context) => {

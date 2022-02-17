@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx jest",
+    "test:watch": "npx jest --watch",
     "lint": "tslint --project tsconfig.json --format stylish",
     "build": "tsc",
     "serve": "ts-node src/server.ts",
@@ -37,6 +38,7 @@
     "koa-bodyparser": "^4.3.0",
     "koa-logger": "^3.2.1",
     "koa-mount": "^4.0.0",
+    "mongodb-memory-server": "7.3.6",
     "nodemon": "^2.0.15",
     "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
@@ -50,6 +52,6 @@
   },
   "dependencies": {
     "joi": "^17.6.0",
-    "mongoose": "^6.2.1"
+    "mongoose": "5.13.7"
   }
 }

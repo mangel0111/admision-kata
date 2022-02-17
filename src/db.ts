@@ -1,6 +1,6 @@
 import * as mongoose from "mongoose";
 
-const connectionString: string = "mongodb://127.0.0.1:27017/admision-kata";
+export const connectionString: string = "mongodb://127.0.0.1:27017/admision-kata";
 
 export const initDB = (): void => {
   mongoose.connect(connectionString);

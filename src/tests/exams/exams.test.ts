@@ -1,4 +1,5 @@
 import * as request from "supertest";
+require('../db-handler');
 import app from "../../app";
 
 test("Should create the exam", async () => {

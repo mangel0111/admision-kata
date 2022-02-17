@@ -35,6 +35,7 @@ const jestConfig: Config.InitialOptions = {
     "/src/db.ts",
     "/src/app.ts",
   ],
+  testTimeout: 20000,
 };
 
 export default jestConfig;
